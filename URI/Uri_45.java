@@ -4,29 +4,42 @@ public class Uri_45 {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 
-		double x = scan.nextDouble();
-		double y = scan.nextDouble();
-		double z = scan.nextDouble();
+		double a = scan.nextDouble();
+		double b = scan.nextDouble();
+		double c = scan.nextDouble();
 
-		double n1 = Math.max(x, Math.max(y, z));
-		double n2 = 0;
-		double n3 = 0;
 
-		if (n1 == x) {
-			n2 = Math.max(y, z);
-			n3 = Math.min(y, z);
-		}  if (n1 == y) {
-			n2 = Math.max(x, z);
-			n3 = Math.min(x, z);		
-		} 
-		if (n1 == z) {
-			n2 = Math.max(y, x);
-			n3 = Math.min(y, x);
+		if (a < b) {
+			double t = a;
+			a = b;
+			b = t;
 		}
-
-		System.out.ptintln(n1);
-		System.out.ptintln(n2);
-		System.out.ptintln(n3);
+		if (a < c) {
+			double t = a;
+			a = c;
+			c = t;
+		}
+		if (b < b) {
+			double t = b;
+			b = c;
+			c = t;
+		}
+		 if (a >= b + c) {
+		 	System.out.println("NAO FORMA TRIANGULO");
+		 } else {
+		 	if (a * a == b * b + c * c) {
+		 		System.out.println("TRIANGULO RETANGULO");
+		 	} else if (a * a > b * b + c * c) {
+		 		System.out.println("TRIANGULO OBTUSANGULO");
+		 	} else if (a * a < b * b + c * c) {
+		 		System.out.println("TRIANGULO ACUTANGULO");
+		 	}
+		 	if (a == b && b == c) {
+		 		System.out.println("TRIANGULO EQUILATERO");
+		 	} else if ((a == b && a != c) || (b == c && b !=a) || (a == c && a != b)) {
+		 		System.out.println("TRIANGULO ISOSCELES");
+		 	}
+		 }
 		
 	}
 }

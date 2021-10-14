@@ -27,6 +27,6 @@ public class Uri_48 {
 
 		System.out.printf("Novo salario: %.2f%n", salary + increase);
 		System.out.printf("Reajuste ganho: %.2f%n", increase);
-		System.out.println("Em percentual: " + percentage + "%");
+		System.out.println("Em percentual: " + percentage + " %");
 	}
 }
